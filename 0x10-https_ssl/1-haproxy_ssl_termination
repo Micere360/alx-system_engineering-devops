@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Configure HAproxy to accept encrypted traffic for subdomain www.micere360.tech
 
-global
+
+global 
         log /dev/log    local0
         log /dev/log    local1 notice
         chroot /var/lib/haproxy
@@ -61,3 +62,4 @@ backend www-backend
 
 backend letsencrypt-backend
    server letsencrypt 127.0.0.1:54321
+
